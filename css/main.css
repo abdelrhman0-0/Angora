@@ -885,7 +885,7 @@ nav {
 /********  Media Query  *********/
 @media screen and (max-width: 569px){
   html{
-    font-size: 13px;
+    font-size: 11px;
   }
   #client h4 {
     font-size: 0.7rem !important;
@@ -895,6 +895,9 @@ nav {
   }
     .clientSlide {
     width: 90% !important;
+  }
+  #client .nav-item {
+    width: 25% !important;
   }
   
  
@@ -932,10 +935,8 @@ nav {
   }
 
   /* Client Section */
-  #client ul .nav-item {
-    width: 30% !important;
-    padding-bottom: 15px;
-    
+  #client .nav-item {
+    width: 22% !important;
   }
 
   .clientText {
