@@ -5,7 +5,19 @@ const logo = $('.navbar-brand img');
 const sections = $('section');
 const burgerBtn = $('.fa-bars');
 const colorPicker = $('#color-picker--item a');
+const spinner = $('.lds-hourglass');
+const loadingScreen = $('.loading-screen');
+const aboutOffset = $('#about').offset().top
 
+
+
+$(document).ready(()=>{
+    spinner.fadeOut(1000,()=>{
+        loadingScreen.fadeOut(1000,()=>{
+            $('body').css('overflow-y','auto')
+        })
+    })
+});
 
 
 
@@ -67,21 +79,48 @@ function scrollMe(){
                     }else{
                         link.classList.remove('active')
                     }
+                    
                 }
                     
              }else if($('body','html').scrollTop() < sections[0].offsetTop){
                 navLink.removeClass('active')
                 navLink.eq(0).addClass('active')
                 }
+                
         }
+        
        
+    })
+}
+function clickOnNav(){
+    navLink.click((e)=>{
+    let linkHref = $(e.target).attr('href');
+    let currentSecOff = $(linkHref).offset().top;
+    $('body,html').animate({scrollTop:currentSecOff},1500);
+
+})
+}
+
+function goToTop(){
+    $('.goToTop').click(()=>{
+        $('html,body').animate({scrollTop:0},1500)
+    })
+}
+
+function goToSecondSec() {
+    $('#mouse').click(()=>{
+        $('body,html').animate({scrollTop:aboutOffset},2000)
     })
 }
 
 function callFuncs(){
     scrollMe();
+    clickOnNav();
     pickColor();
     reset();
+    goToTop();
+    goToSecondSec();
+    
 
 }
 
