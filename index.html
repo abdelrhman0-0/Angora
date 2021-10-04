@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!--  Go to top button-->
 
+    <!--- Color picker -->
     <a
       class="rightButton rounded-1 position-absolute position-fixed border-0"
       data-bs-toggle="collapse"
@@ -36,7 +36,6 @@
       <i class="fas fa-cogs"></i>
     </a>
 
-    <!--- Color picker -->
     <div
       class="collapse rightCollapse position-absolute position-fixed"
       id="collapseExample"
@@ -44,17 +43,17 @@
       <div class="card card-body text-center">
         <h6 class="p-1">Color Switcher</h6>
         <hr />
-        <div class="d-flex flex-wrap justify-content-around align-items-center">
-          <a href="" class="a1"></a>
-          <a href="" class="a2"></a>
-          <a href="" class="a3"></a>
-          <a href="" class="a4"></a>
-          <a href="" class="a5"></a>
-          <a href="" class="a6"></a>
-          <a href="" class="a7"></a>
-          <a href="" class="a8"></a>
-          <a href="" class="a9"></a>
-          <a href="" class="a10"></a>
+        <div id="color-picker--item" class="d-flex flex-wrap justify-content-around align-items-center">
+          <a  class="a1"></a>
+          <a  class="a2"></a>
+          <a  class="a3"></a>
+          <a class="a4"></a>
+          <a class="a5"></a>
+          <a class="a6"></a>
+          <a class="a7"></a>
+          <a class="a8"></a>
+          <a class="a9"></a>
+          <a class="a10"></a>
         </div>
         <button class="btn reset">Reset Default Teal</button>
       </div>
@@ -75,10 +74,10 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+          <i class="fas fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse my-3 my-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#home"
                   >Home</a
@@ -1098,8 +1097,9 @@
         </div>
       </div>
     </footer>
-
+    <script src="js/jquery-3.6.0.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

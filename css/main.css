@@ -106,28 +106,29 @@ body {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  cursor: pointer;
   /* margin-bottom: 10px; */
 }
 .a1 {
-  background-color: #6610f2;
+  background-color: #F25454;
 }
 .a2 {
-  background-color: #007bff;
+  background-color: #4E9CB5;
 }
 .a3 {
-  background-color: #6f42c1;
+  background-color: #24BCA4;
 }
 .a4 {
-  background-color: #17a2b8;
+  background-color: #C86F98;
 }
 .a5 {
   background-color: #dc3545;
 }
 .a6 {
-  background-color: #e83e8c;
+  background-color: #E4D20C;
 }
 .a7 {
-  background-color: #28a745;
+  background-color: #6B798F;
 }
 .a8 {
   background-color: #ffc107;
@@ -140,7 +141,7 @@ body {
 }
 
 .reset {
-  background-color: #20c997;
+  background-color: #F05354;
   font-size: 0.8rem;
   color: #fff;
   margin-top: 10px;
@@ -159,7 +160,8 @@ nav {
   top: 0;
   z-index: 99999;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 25px 0 !important;
+  padding: 15px 0 !important;
+  transition: all 0.7s;
 }
 #home h2 {
   color: #fff;
@@ -173,7 +175,50 @@ nav {
   animation-timing-function: ease-in-out;
 }
 
-#home nav .nav-link {
+
+
+/* #home nav .nav-link {
+  color: #fff !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  padding-left: 20px !important;
+} */
+#home nav .active {
+  color: #f25454 !important;
+}
+.not-scrolling{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px 0 !important;
+  transition: all 0.4s;
+}
+.scrolling{
+  position: fixed;
+  padding: 0 !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  color: #000 !important;
+
+}
+.nav-link--scroll{
+  color: #000 !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  padding-left: 20px !important;
+}
+.nav-link--not-scroll{
   color: #fff !important;
   font-size: 0.8rem !important;
   font-weight: 600 !important;
@@ -182,8 +227,8 @@ nav {
   transition: all 0.4s;
   padding-left: 20px !important;
 }
-#home nav .active {
-  color: #f25454 !important;
+.navbar-toggler:focus{
+  box-shadow: none !important;
 }
 .fb {
   padding-right: 0px !important;
@@ -193,7 +238,28 @@ nav {
 .ic {
   margin-left: 40px !important;
 }
+.fa-bars{
+  color: #fff;
+  transition: all 0.4s;
+  font-size: 2rem;
+}
+.fa-bars:hover{
+  color:#f25454;
+}
+.burger-onscroll{
+  color: #000;
+  transition: all 0.4s;
+  font-size: 2rem;
+}
+.burger-offscroll{
+  color: #fff;
+  transition: all 0.4s;
+  font-size: 2rem;
+}
+.burger-offscroll:hover,.burger-onscroll:hover {
+  color:#f25454;
 
+}
 #home .nav-link:hover {
   color: #f25454 !important;
 }
